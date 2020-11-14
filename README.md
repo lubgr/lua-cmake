@@ -15,7 +15,7 @@ repository offers two simple facilities.
 - A git clone of the upstream [sources](https://github.com/lua/lua) is configured as a submodule,
   such that recursive initialization of this repository pulls them in.
 
-The Lua version pulled in is the current v3.5.5. The library is built as C (not C++, which is
+The Lua version pulled in is the current v5.4.1. The library is built as C (not C++, which is
 possible), with default upstream compiler flags. Whether a shared or static library is built depends
 on `cmake`'s
 [`BUILD_SHARED_LIBS`](https://cmake.org/cmake/help/latest/variable/BUILD_SHARED_LIBS.html) flag. No
