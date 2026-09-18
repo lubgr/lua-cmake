@@ -21,7 +21,15 @@ on `cmake`'s
 [`BUILD_SHARED_LIBS`](https://cmake.org/cmake/help/latest/variable/BUILD_SHARED_LIBS.html) flag. No
 `install` target is configured and no standalone executable is built, given the intended use case.
 
-Here's how to use it:
+# How to use it:
+## CPM
+In the `CMakeLists.txt` of your application, add
+```
+CPMAddPackage("gh:lubgr/lua-cmake#master")
+
+target_link_libraries(yourTarget PRIVATE lua::lib)
+```
+## Git Submodules
 ```bash
 cd path/to/your/project
 
@@ -36,5 +44,6 @@ add_subdirectory(external/lua)
 
 target_link_libraries(yourTarget PRIVATE lua::lib)
 ```
+------------------------------------------------------------------------
 That's it. Further integration with a library to facilitate the bindings (e.g.
 [sol2](https://github.com/ThePhD/sol2)) is straightfoward.
